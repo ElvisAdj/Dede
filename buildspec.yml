@@ -9,7 +9,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
+<<<<<<< HEAD
       - docker build --platform=linux/amd64  -t $IMAGE_REPO_NAME:$IMAGE_TAG -f Dockerfile .
+=======
+      - docker build --platform=linux/amd64  -t $IMAGE_REPO_NAME:$IMAGE_TAG -f DockerfileProd .
+>>>>>>> f65780dfe16ea278a79953cbcbf2073cabef144c
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG      
   post_build:
     commands:
