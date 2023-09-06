@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM --platform=linux/amd64  python
 WORKDIR /app
 ADD . /app
 RUN python setup.py install
