@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python
+FROM --platform=linux/amd64 amd64/python
 WORKDIR /app
 ADD . /app
 RUN python setup.py install
